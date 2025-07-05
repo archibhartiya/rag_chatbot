@@ -7,7 +7,7 @@ A smart, Gemini-powered chatbot that lets users:
 
 ---
 
-## 🧠 Architecture Overview
+# 🧠 Architecture Overview
 
 ```mermaid
 graph LR
@@ -18,11 +18,10 @@ graph LR
     F[Flask API (app.py)]
     DB[SQLite DB (complaints.db)]
 
-    U --> S
-    S --> C
-    C --> R
-    C --> F
-    F --> DB
-    R --> S
-    F --> S
-```
+    U -->|User Input| S
+    S -->|Query| C
+    C -->|FAQ Intent| R
+    C -->|Complaint Intent| F
+    F -->|Store Data| DB
+    R -->|Response| S
+    F -->|Response| S
