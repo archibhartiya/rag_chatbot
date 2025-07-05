@@ -11,10 +11,11 @@ A smart, Gemini-powered chatbot that lets users:
 
 ```mermaid
 graph LR
-    U[User] --> S[Streamlit Chat UI<br/>(chat_app.py)]
-    S --> C[Intent Classifier<br/>(Gemini via LangChain)]
-    C --> R[RAG (FAQs)<br/>LangChain + PDF]
-    C --> F[Flask API<br/>(app.py)]
-    F --> DB[SQLite DB<br/>(complaints.db)]
+    U[User] --> S[Streamlit Chat UI\\n(chat_app.py)]
+    S --> C[Intent Classifier\\n(Gemini via LangChain)]
+    C --> R[RAG (FAQs)\\nLangChain + PDF]
+    C --> F[Flask API\\n(app.py)]
+    F --> DB[SQLite DB\\n(complaints.db)]
     R --> S
     F --> S
+```
